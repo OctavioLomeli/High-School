@@ -8,8 +8,8 @@ FROM (
 	FROM public.orders o
 		GROUP BY 1
 		HAVING ROUND(AVG(o.total_amt_usd), 2) >	(
-													SELECT ROUND(AVG(o.total_amt_usd), 2)
-													FROM public.orders o
+								SELECT ROUND(AVG(o.total_amt_usd), 2)
+								FROM public.orders o
 												) -- This is the average amount spent
 	)sub
   
