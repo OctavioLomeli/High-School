@@ -6,7 +6,7 @@ Your final table should have these four columns.
 */
 
 SELECT 	o.id,
-		o.account_id, 
-		o.total, 
-		RANK() OVER (PARTITION BY o.account_id ORDER BY o.total DESC) AS total_rank
+	o.account_id, 
+	o.total, 
+	RANK() OVER (PARTITION BY o.account_id ORDER BY o.total DESC) AS total_rank
 FROM orders o
