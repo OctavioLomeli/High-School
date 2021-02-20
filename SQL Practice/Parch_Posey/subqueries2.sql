@@ -13,6 +13,6 @@ SELECT name, region, sales
 FROM rep_and_sales
 	WHERE sales IN (SELECT max
 			FROM
-				(SELECT region, MAX(sales)
-				FROM rep_and_sales
+			    (SELECT region, MAX(sales)
+			     FROM rep_and_sales
 				GROUP BY 1)sub2)
