@@ -1,10 +1,21 @@
--- What is the lifetime average amount spentin terms of total_amt_usd for the top 10 total spending accounts?
-SELECT ROUND(AVG(sum), 2)
-FROM (
-		SELECT o.account_id, SUM(o.total_amt_usd)
-		FROM orders o
-		GROUP BY 1
-		ORDER BY 2 DESC
-		LIMIT 10
-	)sub
-	
+/*
+Retrieve the sales rep that has the highest sales for each 
+*/
+SELECT s.name, r.name region, SUM(o.total_amt_usd)
+FROM public.accounts a
+	JOIN public.orders o ON o.account_id = a.id
+	JOIN public.sales_reps s ON s.id = a.sales_rep_id
+	JOIN public.region r ON r.id = s.region_id
+GROUP BY 1, 2
+HAVING SUM(o.total_amt_usd) IN (SELECT max
+	FROM
+		(SELECT region, MAX(sum)
+		FROM (
+			SELECT s.name, r.name region, SUM(o.total_amt_usd)
+			FROM public.accounts a
+				JOIN public.orders o ON o.account_id = a.id
+				JOIN public.sales_reps s ON s.id = a.sales_rep_id
+				JOIN public.region r ON r.id = s.region_id
+			GROUP BY 1, 2
+			)sub
+		GROUP BY 1)sub2)
