@@ -1,5 +1,5 @@
 /*
-Retrieve the sales rep that has the highest sales for each 
+Retrieve the sales rep that has the highest sales for each region
 */
 SELECT s.name, r.name region, SUM(o.total_amt_usd)
 FROM public.accounts a
