@@ -1,0 +1,217 @@
+body{overflow-x: hidden;}
+/* Navigation bar */
+html {
+    scroll-behavior: smooth;
+  }
+nav
+{
+    width: 100%;
+    background-color: #1D3354;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.navbar a
+{
+    color: white;
+    font-size: 18px;
+}
+.navbar a:hover{color: white; text-decoration: none}
+/* github */
+.github-link{color: white; text-decoration: "none";}
+.github-link:hover{color: white}
+
+/* Search Bar */
+.search-container input[type=text] {
+  padding: 3px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: black thick 20px;
+  margin-left: 40%;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .search-container {
+    float: none;
+  }
+  .search-container a, .search-container input[type=text], .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .search-container input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+/*classes for  Main content */
+.main-content
+{
+    color: white;
+    background-color: #2A4A7A;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.main-content-title
+{
+    margin-left: 44%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    font-size: 50px;
+}
+.project-card-image
+{
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 7%;
+    margin-right: 20%;
+    margin-bottom: 20%;
+    border: solid black 3px;
+}
+.special-image-large
+{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 7%;
+    margin-right: 20%;
+    margin-bottom: 20%;
+    border: solid black 3px;
+}
+.project-card-description
+{
+    width: 65%;
+    font-size: 20px;
+    margin-top: 7%;
+    margin: auto;
+}
+.project-card-image:hover
+{
+    animation: zoom .3s ease forwards;
+}
+.special-image-large:hover
+{
+    animation: zoom .3s ease forwards;
+}
+@keyframes zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.08);
+    }
+}
+.margin-left
+{
+    margin-left: 20%;
+    margin-top: 7%;
+}
+.margin-top
+{
+    margin-top: 14%;
+    margin-left: 17%;
+    margin-bottom: 5%;
+}
+h4.margin-left
+{
+    font-size: 40px;
+}
+h4.margin-top
+{
+    font-size: 40px;
+}
+.coloured
+{
+  color: #ffe2ad;
+}
+/* footer classes */
+.website-footer
+{
+    background-color: #1D3354;
+    color: white;
+    padding-bottom: 10%;
+    padding-top: 4%;
+    padding-left: 20%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+}
+.space-top
+{
+    margin-top: 2%;
+}
+.bold-thick
+{
+  font-weight: bolder;
+  display: inline;
+}
+.footer-links
+{
+  list-style-type: none;
+}
+.footer-links a
+{
+  color: #E9FFF9;
+}
+.connect-title
+{
+  font-family: bookmania, serif;
+  font-style: italic;
+  font-weight: 600;
+}
+/* Dropdown for project tags*/
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content span {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content span:hover {background-color: #f1f1f1; cursor: pointer;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #f1f1f1;
+}
