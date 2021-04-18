@@ -1,0 +1,115 @@
+<!-- This program has three quizzes that allows the user to try and shows them their score at the end. The topics are Math, HTML/CSS, and a 
+"random" quiz. The random quiz has questions that are random and can be something from history to math to basic knowledge. -->
+<html>
+    <head>
+        <title>Quiz Time - Home</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico')}}"/>
+        <link rel="stylesheet" href="../static/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="../static/scripts.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    </head>
+
+    <body>
+        <div class="myNav">
+            <span id="QT"><a name="top">Quiz Time</a></span>
+            <span id="Math"><a href="/math">Math</a></span>
+            <span id="CS"><a href="/programming">Programming</a></span>
+            <span id="Ran"><a href="/random">Random</a></span>
+        </div>
+        
+        <div class="container space space-bottom">
+            <div class="row">
+                <!-- first col -->
+                <div class="col-md-2 resize">
+                    <p class="Welcome">This website contains quizzes. Try them all!</p>
+                    <br>
+                    <p id="spacer">.</p>
+                    <a onclick="bookClick()" id="book" target="_blank" href="https://www.khanacademy.org"><img src="../static/assets/book.png" class="inBook"></a>
+                </div>
+                <!-- Spacer -->
+                <div class="col-md-2">
+                   
+                </div>
+                <!-- second col -->
+                <div class="col-md-2 bg inHeader">
+                    <h3>Random</h3>
+                    <p>This quiz is exactly what you would expect. Completely random questions.</p> 
+                    <p>I can say for sure that you will not find any math problems here.</p>
+                </div>
+                <!-- Spacer -->
+                <div class="col-md-1">
+                </div>
+                <!-- third col -->
+                <div class="col-md-2 bg inHeader">
+                    <h3>Programming</h3>
+                    <p>This quiz has problems that involve programming.</p>
+                    <p>It is mainly Java related problems but there are a few non-Java.</p>
+                </div>
+                <!-- Spacer -->
+                <div class="col-md-1">
+                </div>
+                <!-- fourth col -->
+                <div class="col-md-2 bg inHeader">
+                    <h3>Math</h3>
+                    <p>This quiz is mainly calculus.</p>
+                    <p>Feel free to use paper and pencil to work them out.</p>
+                    <p>You might need a calculator on some.</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-2">
+                    <a class="redirect" href="/random">Go!</a>
+                </div>
+                <div class="col-md-1">
+                    <!-- Spacer -->
+                </div>
+                <div class="col-md-2">
+                    <a class="redirect" href="/programming">Go!</a>
+                </div>
+                <div class="col-md-1">
+                    <!-- Spacer -->
+                </div>
+                <div class="col-md-2">
+                    <a class="redirect" href="/math">Go!</a>
+                </div>
+            </div>
+        </div>
+    </body>
+      <!-- Site footer -->
+      <footer class="site-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Quiz Time is a website that contains three quizzes for the user to attempt. There are 13 questions in each and the topics are math, programming, and a random topic.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="/math">Math</a></li>
+                <li><a href="/random">Random</a></li>
+                <li><a href="/programming">Programming</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">
+                Copyright &copy; 2021 All Rights Reserved by <a href="#top">Quiz Time</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+  </footer>
+</html>

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block page %} Math {% endblock %}
+
+{% block content %}
+
+    {% for math in math_dict %}
+      <div class="container space align {{ math.num }}">
+            <br>
+            <img src="{{ math.Img }}" width="auto" height="25%">
+            <h1>{{ math.Q }}</h1>
+            <br><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="choiceA"  onclick="{{ math.F1 }}">
+                        {{ math.A1 }}
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="choiceB" onclick="{{ math.F2 }}">
+                        {{ math.A2 }}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="choiceC" onclick="{{ math.F3 }}">
+                        {{ math.A3 }}
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-5">
+                    <div class="choiceD" onclick="{{ math.F4 }}">
+                       {{ math.A4 }}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    {% endfor %}
+    {% endblock %}
+    {% block score_display%}
+      <h1 id="MscoreDisplay">Score: </h1>
+    {% endblock %}

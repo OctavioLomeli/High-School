@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Quiz Time - {% block page %} {% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico')}}"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+        <script src="{{url_for('static', filename='scripts.js')}}"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    </head>
+
+    <body style="background-color:#4b4d50;">
+        <!-- Looks wrong but it is not, it uses the properties of the index's nav in order to position -->
+        <div class="myNav">
+            <span id="QT">Quiz Time</span>
+            <span id="Ran"><a href="/home">Home</a></span>
+        </div>
+        {% block content %}
+        {% endblock %}
+        <!-- Last row -->
+        <div class="container spacealign" >
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                  {% block score_display%}{% endblock %}
+                  <br>
+                    <div class="choiceA" style="font-size: 200%">
+                        <a href="/home" style="display: block;width: 100%;">Home</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block page %} Random {% endblock %}
+
+{% block content %}
+
+    {% for random in random_dict %}
+      <div class="container space align {{ random.num }}">
+            <br>
+            <img src="{{ random.Img }}" width="auto" height="23%">
+            <h1>{{ random.Q }}</h1>
+            <br><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="choiceA"  onclick="{{ random.F1 }}">
+                        {{ random.A1 }}
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="choiceB" onclick="{{ random.F2 }}">
+                        {{ random.A2 }}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="choiceC" onclick="{{ random.F3 }}">
+                        {{ random.A3 }}
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-5">
+                    <div class="choiceD" onclick="{{ random.F4 }}">
+                       {{ random.A4 }}
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    {% endfor %}
+    {% endblock %}
+    {% block score_display%}
+      <h1 id="RscoreDisplay">Score: </h1>
+    {% endblock %}
