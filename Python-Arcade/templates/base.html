@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/new_icon2.ico')}}"/>
+        {% block css_link %} {% endblock %}
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Python Arcade</title>
+    </head>
+
+    <body>
+      <a name="Top"></a>
+      <!-- Navigation bar -->
+      <nav class="navbar">
+        Python Arcade
+        <div class='menu-right'>
+          <a href="/">HOME</a>&nbsp;
+          <a href="/projects">PROGRAMS</a>&nbsp;
+          <a href="#Contact">OTHER</a>&nbsp;
+        </div>
+      </nav>
+      {% block content %}
+      {% endblock %}
+      <!-- Website footer, contains social media links and email -->
+      <div class='website-footer'>
+          <a name="Contact"></a>
+          <div class='row'>
+              <div class='col-md-5'>
+                  <h1 class="bold-thick connect-title">other links</h1>
+              </div>
+              <div class='col-md-7'>
+                <br>
+                <ul class="footer-links">
+                  <li><h4 class="bold-thick">github: </h4><a style='margin-left:0%; text-decoration: none' href='https://github.com/OctavioLomeli' target='_blank'> OctavioLomeli</a></li>
+                  <li><h4 class="bold-thick">replit: </h4><a style='margin-left:0%; text-decoration: none' href="https://replit.com/@OctavioLomeli" target='_blank'> OctavioLomeli</a></li>
+                  <li><h4 class="bold-thick">code: </h4><a style='margin-left:0%; text-decoration: none' href="https://github.com/OctavioLomeli/2021/tree/main/Python-Arcade" target='_blank'> here</a></li>
+                </ul>
+              </div>
+          </div>
+      </div>
+    </body>
+</html>
