@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+body{
+    overflow-x: hidden;
+    background-color: #5BC0EB;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    margin-bottom: 3%;
+}
+p {
+    font-size: 150%;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation bar */
+#navbar {
+    overflow: hidden;
+    background-color: #333333;
+    font-size: 155%;
+}
+  
+#navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #105E7F;
+    color: white;
+}
+
+/* For website info on index.html */
+#title{
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+}
+.subheaders{
+    color: white;
+    font-weight: bold;
+}
+
+/* For Button */
+.butt {
+    background-color: #105E7F;
+    font-size: 200%;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+/* For Point Display + Round Display */
+.ui-bot{
+    margin-top: 5%;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+/* For game.html */
+#response-sub{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4%;
+    margin-top: 5%;
+}
+.bot-speech{
+    background-color: white;
+    font-size: 170%;
+    text-align: right;
+    height: 100%;
+}
+.bot-title{
+    background-color: black;
+    color:white;
+    font-size: 170%;
+    text-align: center;
+}
+.butt-bot{
+    background-color: white;
+    border-width: 0;
+    padding: 1%;
+    font-size: 125%;
+}
+.butt-bot:hover{
+    background-color: #105E7F;
+    color: white;
+}
+
+/* For game ending */
+
+.Result-Text{
+    color: white;
+    margin-top: 5%;
+    text-align: center;
+}
+.statistics{
+    font-size: 150%;
+    margin-bottom: 3%;
+}
+.results{
+    display: none;
+}
+#Result-Text{
+    text-align: center;
+    margin-top: 5%;
+    color: white;
+}
+/* For bot's face (image)*/
+#face{
+  width: 10%;
+  position: absolute;
+  right: 15%;
+  top: 17%;
+}
