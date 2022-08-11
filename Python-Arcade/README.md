@@ -3,7 +3,8 @@
 ### Created as an independent project for Google's Code Next program.
 
 <div>
-  <a href="https://python-arcade.junelovesyou.repl.co/" target="_blank">Website</a>
+  Here is the <a href="https://python-arcade.junelovesyou.repl.co/" target="_blank">website.</a> 
+  It's possible some of the links don't work in the program because I changed my username before.
 </div>
 
 <details>
