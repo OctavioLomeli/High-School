@@ -3,7 +3,7 @@
 ### Created as an independent project for Google's Code Next program.
 
 <div>
-  <a href="https://python-arcade.junelovesyou.repl.co/">Website</a>
+  <a href="https://python-arcade.junelovesyou.repl.co/" target="_blank">Website</a>
 </div>
 
 <details>
